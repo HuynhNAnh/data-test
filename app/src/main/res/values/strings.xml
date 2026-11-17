@@ -23,4 +23,12 @@
     <string name="student_delete_confirm">Bạn có muốn xóa %1$s khỏi danh sách?</string>
     <string name="save">Lưu</string>
     <string name="cancel">Hủy</string>
+    <string name="import_students">Tải từ API</string>
+    <string name="import_loading">Đang tải…</string>
+    <string name="import_success">Đã thêm sinh viên từ API.</string>
+    <string name="import_no_new">API không có sinh viên mới.</string>
+    <string name="import_connection_error">Không kết nối được API mẫu. Kiểm tra máy chủ và chạy lại adb reverse.</string>
+    <string name="import_server_error">Máy chủ API trả về lỗi.</string>
+    <string name="import_data_error">Dữ liệu sinh viên từ API không hợp lệ.</string>
+    <string name="import_save_error">Không thể lưu dữ liệu API vào máy.</string>
 </resources>

@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.commit
 import vn.udn.ute.lab9_data.data.AppDatabase
 import vn.udn.ute.lab9_data.databinding.ActivityMainBinding
+import vn.udn.ute.lab9_data.network.RetrofitClient
 import vn.udn.ute.lab9_data.repository.StudentRepository
 import vn.udn.ute.lab9_data.ui.StudentListFragment
 import vn.udn.ute.lab9_data.viewmodel.StudentViewModelFactory
@@ -15,7 +16,7 @@ import vn.udn.ute.lab9_data.viewmodel.StudentViewModelFactory
 class MainActivity : AppCompatActivity() {
     internal val studentViewModelFactory by lazy {
         val dao = AppDatabase.getDatabase(this).studentDao()
-        StudentViewModelFactory(StudentRepository(dao))
+        StudentViewModelFactory(StudentRepository(dao) { RetrofitClient.apiService })
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

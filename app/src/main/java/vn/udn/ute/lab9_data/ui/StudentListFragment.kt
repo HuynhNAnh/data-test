@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
+import vn.udn.ute.lab9_data.BuildConfig
 import vn.udn.ute.lab9_data.MainActivity
 import vn.udn.ute.lab9_data.R
 import vn.udn.ute.lab9_data.databinding.FragmentStudentListBinding
@@ -37,6 +38,12 @@ class StudentListFragment : Fragment() {
         val adapter = StudentAdapter(::confirmDelete)
         binding.rvStudents.layoutManager = LinearLayoutManager(requireContext())
         binding.rvStudents.adapter = adapter
+        binding.btnImport.isVisible = BuildConfig.DEBUG
+        binding.btnImport.setOnClickListener { viewModel.importStudents() }
+        viewModel.importing.observe(viewLifecycleOwner) { importing ->
+            binding.btnImport.isEnabled = !importing
+            binding.btnImport.setText(if (importing) R.string.import_loading else R.string.import_students)
+        }
 
         viewModel.allStudents.observe(viewLifecycleOwner) { students ->
             adapter.submitList(students)
