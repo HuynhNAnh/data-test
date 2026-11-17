@@ -3,4 +3,24 @@
     <string name="student_duplicate_code">Mã số sinh viên đã tồn tại.</string>
     <string name="student_save_error">Không thể lưu sinh viên.</string>
     <string name="student_delete_error">Không thể xóa sinh viên.</string>
+    <string name="students_title">Danh sách sinh viên</string>
+    <string name="students_empty">Chưa có sinh viên. Bấm Thêm sinh viên để bắt đầu.</string>
+    <string name="student_add">Thêm sinh viên</string>
+    <string name="student_name">Họ và tên</string>
+    <string name="student_code">Mã số sinh viên</string>
+    <string name="student_email">Email (không bắt buộc)</string>
+    <string name="student_gpa">GPA (0–10)</string>
+    <string name="student_name_required">Nhập họ và tên.</string>
+    <string name="student_code_required">Nhập mã số sinh viên.</string>
+    <string name="student_email_invalid">Email không hợp lệ.</string>
+    <string name="student_gpa_invalid">Nhập GPA từ 0 đến 10.</string>
+    <string name="student_code_value">MSSV: %1$s</string>
+    <string name="student_no_email">Chưa có email</string>
+    <string name="student_gpa_value">GPA: %1$.2f</string>
+    <string name="student_delete">Xóa</string>
+    <string name="student_delete_name">Xóa sinh viên %1$s</string>
+    <string name="student_delete_title">Xóa sinh viên?</string>
+    <string name="student_delete_confirm">Bạn có muốn xóa %1$s khỏi danh sách?</string>
+    <string name="save">Lưu</string>
+    <string name="cancel">Hủy</string>
 </resources>
